@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { StyleSheet, View, Image, Text, ImageBackground } from "react-native";
 import Svg, { Ellipse } from "react-native-svg";
 
-function Profile(props) {
+function Profile1(props) {
   return (
     <View style={styles.container}>
       <View style={styles.imageColumnRow}>
@@ -48,53 +48,23 @@ function Profile(props) {
         <Text style={styles.text}>Profile</Text>
       </ImageBackground>
       <View style={styles.rect}>
+        <Image
+          source={require("../assets/images/illustration_2.png")}
+          resizeMode="contain"
+          style={styles.image7}
+        ></Image>
+        <Text style={styles.areYouSure}>Are You Sure?</Text>
+        <Text style={styles.userId1}>
+          Are you sure you want to logout from this account? you can log bascl
+          in easily
+        </Text>
         <View style={styles.rect2}>
-          <View style={styles.userIdColumnRow}>
-            <View style={styles.userIdColumn}>
-              <Text style={styles.userId}>User ID</Text>
-              <Text style={styles.britneysparks}>britneysparks</Text>
-            </View>
-            <Image
-              source={require("../assets/images/copy.png")}
-              resizeMode="contain"
-              style={styles.image7}
-            ></Image>
-          </View>
-          <View style={styles.accountNumberColumnRow}>
-            <View style={styles.accountNumberColumn}>
-              <Text style={styles.accountNumber}>Account Number</Text>
-              <Text style={styles.britneysparks2}>39830473625</Text>
-            </View>
-            <Image
-              source={require("../assets/images/copy.png")}
-              resizeMode="contain"
-              style={styles.image8}
-            ></Image>
-          </View>
+          <Text style={styles.createNewAccount}>Create New Account</Text>
         </View>
-        <View style={styles.image11Row}>
-          <Image
-            source={require("../assets/images/edit_profile.png")}
-            resizeMode="contain"
-            style={styles.image11}
-          ></Image>
-          <Text style={styles.editProfileDetails}>Edit Profile Details</Text>
-        </View>
-        <View style={styles.image10Row}>
-          <Image
-            source={require("../assets/images/change_pin.png")}
-            resizeMode="contain"
-            style={styles.image10}
-          ></Image>
-          <Text style={styles.changePin}>Change PIN</Text>
-        </View>
-        <View style={styles.image9Row}>
-          <Image
-            source={require("../assets/images/logout.png")}
-            resizeMode="contain"
-            style={styles.image9}
-          ></Image>
-          <Text style={styles.logout}>Logout</Text>
+        <View style={styles.rect3}>
+          <Text style={styles.createNewAccount2}>
+            Login to Existing Account
+          </Text>
         </View>
       </View>
       <View style={styles.ellipseStack}>
@@ -225,7 +195,7 @@ const styles = StyleSheet.create({
   rect: {
     width: 316,
     height: 416,
-    backgroundColor: "rgba(255,255,255,1)",
+    backgroundColor: "rgba(220,211,253,0.51)",
     shadowColor: "rgba(0,0,0,1)",
     shadowOffset: {
       height: 3,
@@ -238,133 +208,67 @@ const styles = StyleSheet.create({
     marginTop: 206,
     marginLeft: 28
   },
-  rect2: {
-    width: 261,
-    height: 147,
-    backgroundColor: "rgba(255,255,255,1)",
-    shadowColor: "rgba(0,0,0,1)",
-    shadowOffset: {
-      height: 3,
-      width: 2
-    },
-    elevation: 150,
-    shadowOpacity: 0.11,
-    shadowRadius: 50,
-    borderRadius: 10,
-    marginTop: 28,
-    marginLeft: 29
-  },
-  userId: {
-    fontFamily: "roboto-300",
-    color: "#121212",
-    fontSize: 12
-  },
-  britneysparks: {
-    fontFamily: "roboto-500",
-    color: "#121212",
-    fontSize: 15
-  },
-  userIdColumn: {
-    width: 91
-  },
   image7: {
-    width: 19,
-    height: 18,
-    marginLeft: 105,
-    marginTop: 7
+    width: 105,
+    height: 103,
+    marginTop: 11,
+    marginLeft: 107
   },
-  userIdColumnRow: {
-    height: 35,
-    flexDirection: "row",
-    marginTop: 27,
-    marginLeft: 18,
-    marginRight: 28
-  },
-  accountNumber: {
-    fontFamily: "roboto-300",
-    color: "#121212",
-    fontSize: 12
-  },
-  britneysparks2: {
+  areYouSure: {
     fontFamily: "roboto-500",
     color: "#121212",
-    fontSize: 15
-  },
-  accountNumberColumn: {
-    width: 94
-  },
-  image8: {
-    width: 19,
-    height: 18,
-    marginLeft: 103
-  },
-  accountNumberColumnRow: {
-    height: 35,
-    flexDirection: "row",
-    marginTop: 23,
-    marginLeft: 17,
-    marginRight: 28
-  },
-  image11: {
-    width: 38,
-    height: 37
-  },
-  editProfileDetails: {
-    fontFamily: "roboto-300",
-    color: "#121212",
-    fontSize: 15,
-    marginLeft: 16,
-    marginTop: 10
-  },
-  image11Row: {
-    height: 37,
-    flexDirection: "row",
-    marginTop: 33,
-    marginLeft: 31,
-    marginRight: 112
-  },
-  image10: {
-    width: 38,
-    height: 37
-  },
-  changePin: {
-    fontFamily: "roboto-300",
-    color: "#121212",
-    fontSize: 15,
-    marginLeft: 13,
-    marginTop: 13
-  },
-  image10Row: {
-    height: 37,
-    flexDirection: "row",
+    fontSize: 25,
     marginTop: 19,
-    marginLeft: 31,
-    marginRight: 156
+    marginLeft: 81
   },
-  image9: {
-    width: 38,
-    height: 37
-  },
-  logout: {
+  userId1: {
     fontFamily: "roboto-300",
     color: "#121212",
-    fontSize: 15,
-    marginLeft: 16,
-    marginTop: 10
-  },
-  image9Row: {
-    height: 37,
-    flexDirection: "row",
+    fontSize: 12,
+    height: 50,
+    width: 220,
+    textAlign: "center",
+    lineHeight: 20,
     marginTop: 21,
-    marginLeft: 31,
-    marginRight: 185
+    marginLeft: 56
+  },
+  rect2: {
+    width: 244,
+    height: 42,
+    backgroundColor: "rgba(155,129,251,1)",
+    borderRadius: 32,
+    marginTop: 31,
+    marginLeft: 46
+  },
+  createNewAccount: {
+    fontFamily: "roboto-500",
+    color: "rgba(255,255,255,1)",
+    fontSize: 15,
+    marginTop: 12,
+    marginLeft: 48
+  },
+  rect3: {
+    width: 244,
+    height: 42,
+    backgroundColor: "rgba(255,255,255,1)",
+    borderRadius: 32,
+    marginTop: 16,
+    marginLeft: 43
+  },
+  createNewAccount2: {
+    fontFamily: "roboto-500",
+    color: "rgba(155,129,251,1)",
+    fontSize: 15,
+    marginTop: 12,
+    marginLeft: 37
   },
   ellipse: {
     top: 0,
     left: 0,
     width: 122,
     height: 122,
-    position: "absolute"
+    position: "absolute",
+    opacity: 0.82
   },
   ellipse2: {
     top: 93,
@@ -395,4 +299,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Profile;
+export default Profile1;

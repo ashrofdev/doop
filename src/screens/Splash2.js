@@ -7,7 +7,7 @@ function Splash2(props) {
       <View style={styles.imageStack}>
         <Image
           source={require("../assets/images/background_2.png")}
-          resizeMode="contain"
+          // resizeMode="contain"
           style={styles.image}
         ></Image>
         <ImageBackground

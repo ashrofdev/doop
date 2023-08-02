@@ -7,7 +7,7 @@ function Login(props) {
       <View style={styles.imageStack}>
         <ImageBackground
           source={require("../assets/images/background_2.png")}
-          resizeMode="contain"
+          // resizeMode="contain"
           style={styles.image}
           imageStyle={styles.image_imageStyle}
         >
@@ -49,8 +49,7 @@ const styles = StyleSheet.create({
     flex: 1
   },
   image: {
-    top: 55,
-    width: 651,
+    top: 150,
     height: 648,
     position: "absolute",
     left: 0
@@ -66,17 +65,16 @@ const styles = StyleSheet.create({
       width: 3,
       height: 3
     },
-    elevation: 5,
     shadowOpacity: 0.67,
     shadowRadius: 0,
-    marginTop: 189,
+    marginTop: 102,
     marginLeft: 176
   },
   email: {
     fontFamily: "roboto-300",
     color: "#121212",
     fontSize: 12,
-    marginTop: 8,
+    marginTop: 15,
     marginLeft: 15
   },
   rect5: {
@@ -89,10 +87,9 @@ const styles = StyleSheet.create({
       width: 3,
       height: 3
     },
-    elevation: 5,
     shadowOpacity: 0.67,
     shadowRadius: 0,
-    marginTop: 11,
+    marginTop: 18,
     marginLeft: 176
   },
   password: {

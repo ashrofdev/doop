@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Image, Text } from "react-native";
 
-function Calendar(props) {
+function Tanscript(props) {
   return (
     <View style={styles.container}>
       <View style={styles.imageColumnRow}>
@@ -11,7 +11,7 @@ function Calendar(props) {
             resizeMode="contain"
             style={styles.image}
           ></Image>
-          <Text style={styles.text}>Calendar</Text>
+          <Text style={styles.calendar}>Calendar</Text>
         </View>
         <View style={styles.image2Column}>
           <Image
@@ -44,7 +44,7 @@ function Calendar(props) {
           resizeMode="contain"
           style={styles.image5}
         ></Image>
-        <Text style={styles.calendar2}>Calendar</Text>
+        <Text style={styles.transcript2}>Transcript</Text>
       </View>
       <Text style={styles.september142023}>September 14, 2023</Text>
       <View style={styles.rectStack}>
@@ -116,6 +116,33 @@ function Calendar(props) {
           style={styles.image10}
         ></Image>
       </View>
+      <View style={styles.rect7Stack}>
+        <View style={styles.rect7}>
+          <View style={styles.oneMeeting4StackStackRow}>
+            <View style={styles.oneMeeting4StackStack}>
+              <View style={styles.oneMeeting4Stack}>
+                <Text style={styles.oneMeeting4}>One meeting</Text>
+                <View style={styles.rect8}>
+                  <Text style={styles.oneMeeting5}>One meeting</Text>
+                  <Text style={styles.text3}>01:00PM tp 02:00pm</Text>
+                </View>
+              </View>
+              <Text style={styles.teams4}>Teams</Text>
+            </View>
+            <Image
+              source={require("../assets/images/bell.png")}
+              resizeMode="contain"
+              style={styles.image13}
+            ></Image>
+          </View>
+        </View>
+        <Image
+          source={require("../assets/images/phone.png")}
+          resizeMode="contain"
+          style={styles.image12}
+        ></Image>
+      </View>
+      <Text style={styles.september1420232}>September 14, 2023</Text>
     </View>
   );
 }
@@ -129,12 +156,11 @@ const styles = StyleSheet.create({
     height: 29,
     marginLeft: 15
   },
-  text: {
+  calendar: {
     fontFamily: "roboto-300",
     color: "#121212",
-    fontSize: 12,
-    marginTop: 10,
-    marginLeft: 15
+    fontSize: 15,
+    marginTop: 7
   },
   imageColumn: {
     width: 59
@@ -203,10 +229,10 @@ const styles = StyleSheet.create({
     width: 55,
     height: 73,
     position: "absolute",
-    left: 2
+    left: 10
   },
-  calendar2: {
-    top: 50,
+  transcript2: {
+    top: 47,
     left: 0,
     position: "absolute",
     fontFamily: "roboto-300",
@@ -214,10 +240,10 @@ const styles = StyleSheet.create({
     fontSize: 15
   },
   image5Stack: {
-    width: 59,
+    width: 66,
     height: 73,
     marginTop: -769,
-    marginLeft: 158
+    marginLeft: 150
   },
   september142023: {
     fontFamily: "roboto-900",
@@ -349,6 +375,13 @@ const styles = StyleSheet.create({
     marginLeft: 16,
     marginRight: 16
   },
+  text: {
+    fontFamily: "roboto-300",
+    color: "#121212",
+    fontSize: 12,
+    marginTop: 10,
+    marginLeft: 15
+  },
   image9: {
     width: 15,
     height: 34,
@@ -458,7 +491,112 @@ const styles = StyleSheet.create({
     height: 60,
     marginTop: 7,
     marginLeft: 29
+  },
+  rect7: {
+    top: 3,
+    left: 0,
+    width: 306,
+    height: 54,
+    position: "absolute",
+    backgroundColor: "#E6E6E6",
+    borderRadius: 22,
+    shadowColor: "rgba(155,155,155,1)",
+    shadowOffset: {
+      width: -2,
+      height: 3
+    },
+    elevation: 15,
+    shadowOpacity: 0.23,
+    shadowRadius: 5,
+    flexDirection: "row"
+  },
+  oneMeeting4: {
+    top: 9,
+    left: 16,
+    position: "absolute",
+    fontFamily: "roboto-900",
+    color: "#121212",
+    fontSize: 15
+  },
+  rect8: {
+    top: 0,
+    left: 0,
+    width: 218,
+    height: 54,
+    position: "absolute",
+    backgroundColor: "rgba(255,255,255,1)",
+    borderRadius: 20
+  },
+  oneMeeting5: {
+    fontFamily: "roboto-900",
+    color: "#121212",
+    fontSize: 15,
+    marginTop: 10,
+    marginLeft: 23
+  },
+  text3: {
+    fontFamily: "roboto-300",
+    color: "#121212",
+    fontSize: 12,
+    marginTop: 9,
+    marginLeft: 15
+  },
+  oneMeeting4Stack: {
+    top: 0,
+    left: 0,
+    width: 218,
+    height: 54,
+    position: "absolute"
+  },
+  teams4: {
+    top: 10,
+    left: 166,
+    position: "absolute",
+    fontFamily: "roboto-300",
+    color: "#121212",
+    fontSize: 12
+  },
+  oneMeeting4StackStack: {
+    width: 218,
+    height: 54
+  },
+  image13: {
+    width: 15,
+    height: 34,
+    transform: [
+      {
+        rotate: "-3.00deg"
+      }
+    ],
+    marginLeft: 54,
+    marginTop: 9
+  },
+  oneMeeting4StackStackRow: {
+    height: 54,
+    flexDirection: "row",
+    flex: 1,
+    marginRight: 19
+  },
+  image12: {
+    top: 0,
+    left: 235,
+    width: 18,
+    height: 60,
+    position: "absolute"
+  },
+  rect7Stack: {
+    width: 306,
+    height: 60,
+    marginTop: -545,
+    marginLeft: 29
+  },
+  september1420232: {
+    fontFamily: "roboto-900",
+    color: "#121212",
+    fontSize: 15,
+    marginTop: -107,
+    marginLeft: 119
   }
 });
 
-export default Calendar;
+export default Tanscript;
